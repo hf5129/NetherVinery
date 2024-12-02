@@ -22,7 +22,7 @@ public class HearthstoneEffect extends InstantenousMobEffect {
     public void applyEffectTick(LivingEntity livingEntity, int amplifier) {
         if (!livingEntity.level().isClientSide() && livingEntity instanceof ServerPlayer serverPlayer) {
             if (serverPlayer.getRespawnPosition() != null && serverPlayer.getRespawnDimension() != null) {
-                ResourceKey<Level> respawnDimension = serverPlayer.getRespawnDimension();
+                 ResourceKey<Level> respawnDimension = serverPlayer.getRespawnDimension();
                 ServerLevel targetLevel = serverPlayer.server.getLevel(respawnDimension);
                 BlockPos respawnPos = serverPlayer.getRespawnPosition();
                 if (targetLevel != null && (targetLevel.getBlockState(respawnPos).getBlock() instanceof BedBlock)) {

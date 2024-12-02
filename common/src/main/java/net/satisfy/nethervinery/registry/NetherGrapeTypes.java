@@ -1,8 +1,8 @@
 package net.satisfy.nethervinery.registry;
 
-import net.satisfy.vinery.block.grape.GrapeType;
-import net.satisfy.vinery.registry.GrapeTypeRegistry;
 
+import net.satisfy.vinery.core.registry.GrapeTypeRegistry;
+import net.satisfy.vinery.core.util.GrapeType;
 
 public class NetherGrapeTypes {
 

@@ -1,20 +1,22 @@
 package net.satisfy.nethervinery.client;
 
+import dev.architectury.registry.client.rendering.BlockEntityRendererRegistry;
 import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
 import dev.architectury.registry.client.rendering.RenderTypeRegistry;
-import dev.architectury.registry.menu.MenuRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.RenderType;
-import net.satisfy.nethervinery.client.gui.AgingBarrelGui;
-import net.satisfy.nethervinery.client.gui.ApplePressGui;
+import net.minecraft.resources.ResourceLocation;
+import net.satisfy.nethervinery.registry.NetherEntityTypeRegistry;
 import net.satisfy.nethervinery.registry.NetherObjectRegistry;
-import net.satisfy.nethervinery.registry.NetherScreenHandlerTypes;
+import net.satisfy.nethervinery.registry.NetherStorageTypes;
+import net.satisfy.vinery.client.render.block.storage.*;
+import net.satisfy.vinery.core.registry.EntityTypeRegistry;
+import net.satisfy.vinery.core.registry.StorageTypeRegistry;
 
 @Environment(EnvType.CLIENT)
 public class NetherVineryClient {
-
     public static void onInitializeClient() {
 
         RenderTypeRegistry.register(RenderType.cutout(),
@@ -33,7 +35,8 @@ public class NetherVineryClient {
                 }, NetherObjectRegistry.OBSIDIAN_STEM.get()
         );
 
-        MenuRegistry.registerScreenFactory(NetherScreenHandlerTypes.APPLE_PRESS_GUI_HANDLER.get(), ApplePressGui::new);
-        MenuRegistry.registerScreenFactory(NetherScreenHandlerTypes.FERMENTATION_BARREL_GUI_HANDLER.get(), AgingBarrelGui::new);
+        BlockEntityRendererRegistry.register(NetherEntityTypeRegistry.NETHER_STORAGE_ENTITY.get(), context -> new StorageBlockEntityRenderer());
+
     }
+
 }

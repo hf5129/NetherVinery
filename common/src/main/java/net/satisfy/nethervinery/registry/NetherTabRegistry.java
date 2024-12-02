@@ -27,13 +27,13 @@ public class NetherTabRegistry {
                 out.accept(NetherObjectRegistry.WARPED_GRAPE_CRATE.get());
                 out.accept(NetherObjectRegistry.CRIMSON_GRAPEJUICE.get());
                 out.accept(NetherObjectRegistry.WARPED_GRAPEJUICE.get());
-                out.accept(NetherObjectRegistry.BLAZEWINE_PINOT.get());
-                out.accept(NetherObjectRegistry.NETHERITE_NECTAR.get());
-                out.accept(NetherObjectRegistry.GHASTLY_GRENACHE.get());
-                out.accept(NetherObjectRegistry.LAVA_FIZZ.get());
-                out.accept(NetherObjectRegistry.NETHER_FIZZ.get());
-                out.accept(NetherObjectRegistry.IMPROVED_LAVA_FIZZ.get());
-                out.accept(NetherObjectRegistry.IMPROVED_NETHER_FIZZ.get());
+                out.accept(NetherObjectRegistry.BLAZEWINE_PINOT_ITEM.get());
+                out.accept(NetherObjectRegistry.NETHERITE_NECTAR_ITEM.get());
+                out.accept(NetherObjectRegistry.GHASTLY_GRENACHE_ITEM.get());
+                out.accept(NetherObjectRegistry.LAVA_FIZZ_ITEM.get());
+                out.accept(NetherObjectRegistry.NETHER_FIZZ_ITEM.get());
+                out.accept(NetherObjectRegistry.IMPROVED_LAVA_FIZZ_ITEM.get());
+                out.accept(NetherObjectRegistry.IMPROVED_NETHER_FIZZ_ITEM.get());
                 out.accept(NetherObjectRegistry.CRIMSON_FERMENTATION_BARREL.get());
                 out.accept(NetherObjectRegistry.CRIMSON_GRAPEVINE_POT.get());
                 out.accept(NetherObjectRegistry.CRIMSON_APPLE_PRESS.get());
@@ -54,7 +54,6 @@ public class NetherTabRegistry {
                 out.accept(NetherObjectRegistry.WARPED_BARREL.get());
                 out.accept(NetherObjectRegistry.WARPED_LATTICE.get());
                 out.accept(NetherObjectRegistry.CRIMSON_LATTICE.get());
-
             })
             .build());
 

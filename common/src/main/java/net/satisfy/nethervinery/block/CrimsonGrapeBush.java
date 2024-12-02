@@ -5,12 +5,12 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.satisfy.vinery.block.grape.GrapeBush;
-import net.satisfy.vinery.block.grape.GrapeType;
+import net.satisfy.vinery.core.block.GrapeBush;
+import net.satisfy.vinery.core.util.GrapeType;
 
 public class CrimsonGrapeBush extends GrapeBush {
     public CrimsonGrapeBush(Properties settings, GrapeType type) {
-        super(settings, type, 3);
+        super(settings, type);
 
     }
 

@@ -1,4 +1,4 @@
-package net.satisfy.nethervinery.util;
+package net.satisfy.nethervinery.event;
 
 import dev.architectury.event.events.common.LootEvent;
 import net.minecraft.resources.ResourceLocation;

@@ -11,11 +11,10 @@ public class NetherVinery {
 
     public static void init() {
         NetherObjectRegistry.init();
-        NetherBlockEntityTypes.init();
+        NetherEntityTypeRegistry.init();
         NetherTabRegistry.init();
         NetherGrapeTypes.addGrapeAttributes();
         NetherEffects.init();
-        NetherScreenHandlerTypes.init();
         CommonEvents.init();
     }
 
