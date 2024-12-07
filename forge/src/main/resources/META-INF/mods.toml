@@ -6,7 +6,7 @@ license = "Custom"
 modId = "nethervinery"
 version = "${version}"
 displayName = "[Let's Do] NetherVinery"
-authors = "satisfyu"
+authors = "satisfy"
 icon = "pack.png"
 description = '''
 Welcome to Nether Vinery! New grapes, new decor - all in the style of the Nether.
@@ -36,13 +36,6 @@ side = "BOTH"
 [[dependencies.nethervinery]]
 modId = "vinery"
 mandatory = true
-versionRange = "[1.4.24,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.nethervinery]]
-modId = "doapi"
-mandatory = true
-versionRange = "[1.2.9,)"
+versionRange = "[1.4.32,)"
 ordering = "AFTER"
 side = "BOTH"

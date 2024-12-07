@@ -8,13 +8,10 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
+import net.satisfy.nethervinery.client.render.block.storage.*;
 import net.satisfy.nethervinery.core.registry.NetherEntityTypeRegistry;
 import net.satisfy.nethervinery.core.registry.NetherObjectRegistry;
-import net.satisfy.nethervinery.core.util.NetherVineryIdentifier;
-import net.satisfy.vinery.client.render.block.storage.BigBottleRenderer;
-import net.satisfy.vinery.client.render.block.storage.FourBottleRenderer;
-import net.satisfy.vinery.client.render.block.storage.NineBottleRenderer;
-import net.satisfy.vinery.client.render.block.storage.StorageBlockEntityRenderer;
+import net.satisfy.nethervinery.core.registry.NetherStorageTypeRegistry;
 
 @Environment(EnvType.CLIENT)
 public class NetherVineryClient {
@@ -47,13 +44,21 @@ public class NetherVineryClient {
                 NetherObjectRegistry.OBSIDIAN_STEM.get()
         );
 
-        StorageBlockEntityRenderer.registerStorageType(new NetherVineryIdentifier("crimson_wine_rack_big"), new NineBottleRenderer());
-        StorageBlockEntityRenderer.registerStorageType(new NetherVineryIdentifier("crimson_wine_rack_small"), new FourBottleRenderer());
-        StorageBlockEntityRenderer.registerStorageType(new NetherVineryIdentifier("crimson_wine_rack_mid"), new BigBottleRenderer());
+        BlockEntityRendererRegistry.register(NetherEntityTypeRegistry.STORAGE_ENTITY.get(), context -> new NetherStorageBlockEntityRenderer());
 
-        BlockEntityRendererRegistry.register(
-                NetherEntityTypeRegistry.STORAGE_ENTITY.get(),
-                context -> new StorageBlockEntityRenderer()
-        );
+        registerNetherStorageType();
+
+    }
+
+
+    public static void registerNetherStorageTypes(ResourceLocation location, NetherStorageTypeRenderer renderer){
+        NetherStorageBlockEntityRenderer.registerStorageType(location, renderer);
+    }
+
+    public static void registerNetherStorageType(){
+        registerNetherStorageTypes(NetherStorageTypeRegistry.BIG_BOTTLE, new NetherBigBottleRenderer());
+        registerNetherStorageTypes(NetherStorageTypeRegistry.FOUR_BOTTLE, new NetherFourBottleRenderer());
+        registerNetherStorageTypes(NetherStorageTypeRegistry.NINE_BOTTLE, new NetherNineBottleRenderer());
+        registerNetherStorageTypes(NetherStorageTypeRegistry.WINE_BOTTLE, new NetherWineBottleRenderer());
     }
 }

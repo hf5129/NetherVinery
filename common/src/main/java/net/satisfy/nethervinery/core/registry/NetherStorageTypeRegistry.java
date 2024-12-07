@@ -1,11 +1,19 @@
 package net.satisfy.nethervinery.core.registry;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.satisfy.nethervinery.core.util.NetherVineryIdentifier;
 
 import java.util.List;
 import java.util.Set;
 
-public class NetherStorageTypes {
+public class NetherStorageTypeRegistry {
+    public static final ResourceLocation BIG_BOTTLE = new NetherVineryIdentifier("big_bottle");
+    public static final ResourceLocation FOUR_BOTTLE = new NetherVineryIdentifier("four_bottle");
+    public static final ResourceLocation NINE_BOTTLE = new NetherVineryIdentifier("nine_bottle");
+    public static final ResourceLocation WINE_BOTTLE = new NetherVineryIdentifier("wine_bottle");
+    
+
     public static Set<Block> registerBlocks(Set<Block> blocks) {
         blocks.add(NetherObjectRegistry.CRIMSON_WINE_RACK_BIG.get());
         blocks.add(NetherObjectRegistry.CRIMSON_WINE_RACK_SMALL.get());

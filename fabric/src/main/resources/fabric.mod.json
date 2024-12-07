@@ -9,7 +9,7 @@
   ],
   "contact": {
     "sources": "https://github.com/satisfyu/NetherVinery",
-    "homepage": "https://legacy.curseforge.com/minecraft/mc-mods/lets-do-nethervinery"
+    "issues": "https://github.com/satisfyu/Let-s-Do-Hub"
   },
   "license": "Custom",
   "icon": "pack.png",
@@ -32,6 +32,6 @@
     "fabric": "*",
     "minecraft": ">=1.20.1",
     "architectury": ">=6.5.77",
-    "vinery": ">=1.4.30"
+    "vinery": ">=1.4.32"
   }
 }

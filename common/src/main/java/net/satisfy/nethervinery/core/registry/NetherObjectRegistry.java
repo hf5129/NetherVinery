@@ -18,11 +18,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.satisfy.nethervinery.core.block.NetherNineBottleStorageBlock;
 import net.satisfy.nethervinery.core.NetherVinery;
 import net.satisfy.nethervinery.core.block.*;
 import net.satisfy.nethervinery.core.util.NetherVineryIdentifier;
 import net.satisfy.vinery.core.block.*;
-import net.satisfy.vinery.core.item.DrinkBlockItem;
 import net.satisfy.vinery.core.item.GrapeBushSeedItem;
 import net.satisfy.vinery.core.item.GrapeItem;
 import net.satisfy.vinery.core.registry.MobEffectRegistry;
@@ -54,13 +54,13 @@ public class NetherObjectRegistry {
     public static final RegistrySupplier<Block> CRIMSON_GRAPE_GRATE = registerWithItem("crimson_grape_crate", () -> new FacingBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL)));
     public static final RegistrySupplier<Item> WARPED_GRAPEJUICE = registerItem("warped_grapejuice", () -> new Item(getSettings()));
     public static final RegistrySupplier<Item> CRIMSON_GRAPEJUICE = registerItem("crimson_grapejuice", () -> new Item(getSettings()));
-    public static final RegistrySupplier<Block> GHASTLY_GRENACHE = registerBlock("ghastly_grenache", () -> new WineBottleBlock(getWineSettings(), 2));
-    public static final RegistrySupplier<Block> NETHERITE_NECTAR = registerBlock("netherite_nectar", () -> new WineBottleBlock(getWineSettings(), 3));
-    public static final RegistrySupplier<Block> BLAZEWINE_PINOT = registerBlock("blazewine_pinot", () -> new WineBottleBlock(getWineSettings(), 1));
-    public static final RegistrySupplier<Block> NETHER_FIZZ = registerBlock("nether_fizz", () -> new WineBottleBlock(getWineSettings(), 2));
-    public static final RegistrySupplier<Block> LAVA_FIZZ = registerBlock("lava_fizz", () -> new WineBottleBlock(getWineSettings(), 3));
-    public static final RegistrySupplier<Block> IMPROVED_NETHER_FIZZ = registerBlock("improved_nether_fizz", () -> new WineBottleBlock(getWineSettings(), 3));
-    public static final RegistrySupplier<Block> IMPROVED_LAVA_FIZZ = registerBlock("improved_lava_fizz", () -> new WineBottleBlock(getWineSettings(), 3));
+    public static final RegistrySupplier<Block> GHASTLY_GRENACHE = registerBlock("ghastly_grenache", () -> new  NetherWineBottleBlock(getWineSettings(), 2));
+    public static final RegistrySupplier<Block> NETHERITE_NECTAR = registerBlock("netherite_nectar", () -> new NetherWineBottleBlock(getWineSettings(), 3));
+    public static final RegistrySupplier<Block> BLAZEWINE_PINOT = registerBlock("blazewine_pinot", () -> new NetherWineBottleBlock(getWineSettings(), 1));
+    public static final RegistrySupplier<Block> NETHER_FIZZ = registerBlock("nether_fizz", () -> new NetherWineBottleBlock(getWineSettings(), 2));
+    public static final RegistrySupplier<Block> LAVA_FIZZ = registerBlock("lava_fizz", () -> new NetherWineBottleBlock(getWineSettings(), 3));
+    public static final RegistrySupplier<Block> IMPROVED_NETHER_FIZZ = registerBlock("improved_nether_fizz", () -> new NetherWineBottleBlock(getWineSettings(), 3));
+    public static final RegistrySupplier<Block> IMPROVED_LAVA_FIZZ = registerBlock("improved_lava_fizz", () -> new NetherWineBottleBlock(getWineSettings(), 3));
     public static final RegistrySupplier<Item> GHASTLY_GRENACHE_ITEM = registerWineItem("ghastly_grenache", GHASTLY_GRENACHE, () -> createWineSettings(() -> MobEffectRegistry.IMPROVED_JUMP_BOOST.get(), 1600, 0), true);
     public static final RegistrySupplier<Item> BLAZEWINE_PINOT_ITEM = registerWineItem("blazewine_pinot", BLAZEWINE_PINOT, () -> createWineSettings(() -> MobEffectRegistry.LAVA_WALKER.get(), 1600, 0), true);
     public static final RegistrySupplier<Item> NETHERITE_NECTAR_ITEM = registerFixedDurationWineItem("netherite_nectar", NETHERITE_NECTAR, 240, () -> NetherEffects.NETHERITE.get(), 0);
@@ -71,18 +71,18 @@ public class NetherObjectRegistry {
     public static final RegistrySupplier<Block> CRIMSON_FERMENTATION_BARREL = registerWithItem("crimson_fermentation_barrel", () -> new NetherFermentationBarrelBlock(BlockBehaviour.Properties.copy(Blocks.BARREL).noOcclusion()));
     public static final RegistrySupplier<Block> CRIMSON_GRAPEVINE_POT = registerWithItem("crimson_grapevine_pot", () -> new NetherGrapevinePotBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS).noOcclusion()));
     public static final RegistrySupplier<Block> CRIMSON_APPLE_PRESS = registerWithItem("crimson_apple_press", () -> new NetherApplePressBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS).noOcclusion()));
-    public static final RegistrySupplier<Block> CRIMSON_WINE_RACK_BIG = registerWithItem("crimson_wine_rack_big", () -> new NineBottleStorageBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).noOcclusion()));
-    public static final RegistrySupplier<Block> CRIMSON_WINE_RACK_SMALL = registerWithItem("crimson_wine_rack_small", () -> new FourBottleStorageBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).noOcclusion()));
-    public static final RegistrySupplier<Block> CRIMSON_WINE_RACK_MID = registerWithItem("crimson_wine_rack_mid", () -> new BigBottleStorageBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistrySupplier<Block> CRIMSON_WINE_RACK_BIG = registerWithItem("crimson_wine_rack_big", () -> new NetherNineBottleStorageBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistrySupplier<Block> CRIMSON_WINE_RACK_SMALL = registerWithItem("crimson_wine_rack_small", () -> new NetherFourBottleStorageBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistrySupplier<Block> CRIMSON_WINE_RACK_MID = registerWithItem("crimson_wine_rack_mid", () -> new NetherBigBottleStorageBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).noOcclusion()));
     public static final RegistrySupplier<Block> REINFORCED_CRIMSON_PLANKS = registerWithItem("reinforced_crimson_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
     public static final RegistrySupplier<Block> CRESTED_CRIMSON_PLANKS = registerWithItem("crested_crimson_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
     public static final RegistrySupplier<Block> CRIMSON_BARREL = registerWithItem("crimson_barrel", () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.BARREL)));
     public static final RegistrySupplier<Block> WARPED_FERMENTATION_BARREL = registerWithItem("warped_fermentation_barrel", () -> new NetherFermentationBarrelBlock(BlockBehaviour.Properties.copy(Blocks.BARREL).noOcclusion()));
     public static final RegistrySupplier<Block> WARPED_GRAPEVINE_POT = registerWithItem("warped_grapevine_pot", () -> new NetherGrapevinePotBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS).noOcclusion()));
     public static final RegistrySupplier<Block> WARPED_APPLE_PRESS = registerWithItem("warped_apple_press", () -> new NetherApplePressBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS).noOcclusion()));
-    public static final RegistrySupplier<Block> WARPED_WINE_RACK_BIG = registerWithItem("warped_wine_rack_big", () -> new NineBottleStorageBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).noOcclusion()));
-    public static final RegistrySupplier<Block> WARPED_WINE_RACK_SMALL = registerWithItem("warped_wine_rack_small", () -> new FourBottleStorageBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).noOcclusion()));
-    public static final RegistrySupplier<Block> WARPED_WINE_RACK_MID = registerWithItem("warped_wine_rack_mid", () -> new BigBottleStorageBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistrySupplier<Block> WARPED_WINE_RACK_BIG = registerWithItem("warped_wine_rack_big", () -> new NetherNineBottleStorageBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistrySupplier<Block> WARPED_WINE_RACK_SMALL = registerWithItem("warped_wine_rack_small", () -> new NetherFourBottleStorageBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistrySupplier<Block> WARPED_WINE_RACK_MID = registerWithItem("warped_wine_rack_mid", () -> new NetherBigBottleStorageBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(SoundType.WOOD).noOcclusion()));
     public static final RegistrySupplier<Block> REINFORCED_WARPED_PLANKS = registerWithItem("reinforced_warped_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
     public static final RegistrySupplier<Block> CRESTED_WARPED_PLANKS = registerWithItem("crested_warped_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
     public static final RegistrySupplier<Block> WARPED_BARREL = registerWithItem("warped_barrel", () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.BARREL)));
@@ -120,7 +120,7 @@ public class NetherObjectRegistry {
     }
 
     private static RegistrySupplier<Item> registerWineItem(String name, Supplier<Block> wineBlock, Supplier<WineSettings> wineSettings, boolean scaleDurationWithAge) {
-        return registerItemtem(name, () -> new DrinkBlockItem(
+        return registerItemtem(name, () -> new NetherDrinkBlockItem(
                 wineBlock.get(),
                 wineSettings.get().getProperties(),
                 wineSettings.get().getBaseDuration(),
@@ -141,7 +141,7 @@ public class NetherObjectRegistry {
                     .saturationMod(0.3f)
                     .alwaysEat()
                     .build();
-            return new DrinkBlockItem(
+            return new NetherDrinkBlockItem(
                     wineBlock.get(),
                     new Item.Properties().food(food),
                     fixedDurationTicks,
