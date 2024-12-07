@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "nethervinery:block/warped_apple_press",
+    "facing=east,half=lower": {
+      "model": "nethervinery:block/warped_apple_press_bottom",
       "y": 90
     },
-    "facing=north": {
-      "model": "nethervinery:block/warped_apple_press"
+    "facing=north,half=lower": {
+      "model": "nethervinery:block/warped_apple_press_bottom"
     },
-    "facing=south": {
-      "model": "nethervinery:block/warped_apple_press",
+    "facing=south,half=lower": {
+      "model": "nethervinery:block/warped_apple_press_bottom",
       "y": 180
     },
-    "facing=west": {
-      "model": "nethervinery:block/warped_apple_press",
+    "facing=west,half=lower": {
+      "model": "nethervinery:block/warped_apple_press_bottom",
+      "y": 270
+    },
+    "facing=east,half=upper": {
+      "model": "nethervinery:block/warped_apple_press_top",
+      "y": 90
+    },
+    "facing=north,half=upper": {
+      "model": "nethervinery:block/warped_apple_press_top"
+    },
+    "facing=south,half=upper": {
+      "model": "nethervinery:block/warped_apple_press_top",
+      "y": 180
+    },
+    "facing=west,half=upper": {
+      "model": "nethervinery:block/warped_apple_press_top",
       "y": 270
     }
   }

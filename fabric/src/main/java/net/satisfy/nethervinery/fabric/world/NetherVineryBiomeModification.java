@@ -4,8 +4,8 @@ import net.fabricmc.fabric.api.biome.v1.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.levelgen.GenerationStep;
-import net.satisfy.nethervinery.util.NetherVineryIdentifier;
-import net.satisfy.nethervinery.world.NetherVineryPlacedFeatures;
+import net.satisfy.nethervinery.core.util.NetherVineryIdentifier;
+import net.satisfy.nethervinery.core.world.NetherVineryPlacedFeatures;
 
 import java.util.function.Predicate;
 

@@ -23,15 +23,15 @@
     ],
     "preLaunch": [
       "net.satisfy.nethervinery.fabric.NetherVineryFabricPre"
-    ],
-    "doapi": [
-      "net.satisfy.nethervinery.util.api.NetherVineryDoApi"
     ]
   },
+  "mixins": [
+    "nethervinery-common.mixins.json"
+  ],
   "depends": {
     "fabric": "*",
     "minecraft": ">=1.20.1",
     "architectury": ">=6.5.77",
-    "vinery": ">=1.4.24"
+    "vinery": ">=1.4.30"
   }
 }
