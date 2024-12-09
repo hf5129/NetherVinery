@@ -49,11 +49,16 @@
   "item.vinery.wine.block.nethervinery.lava_fizz": "Teleports you back to your last death point. \u00A74Only works in the Overworld. \u00A7rNo guarantee for use in the Nether or End - all liability is declined",
   "item.vinery.wine.block.nethervinery.improved_nether_fizz": "Teleports you back to your last resting place with slight protection. \u00A74Only works in the Overworld. \u00A7rNo guarantee for use in the Nether or End - all liability is declined",
   "item.vinery.wine.block.nethervinery.improved_lava_fizz": "Teleports you back to your last death point with slight protection. \u00A74Only works in the Overworld. \u00A7rNo guarantee for use in the Nether or End - all liability is declined",
-"effect.nethervinery.netherite": "Netherite Resilience",
+  "effect.nethervinery.netherite": "Netherite Resilience",
+  "effect.nethervinery.netherite.description": "You are Invulnerable for the Duration of the Effect.",
   "effect.nethervinery.gravedigger": "Gravedigger",
+  "effect.nethervinery.gravedigger.description": "Takes you back to your last Death Point.",
   "effect.nethervinery.improved_gravedigger": "Improved Gravedigger",
+  "effect.nethervinery.improved_gravedigger.description": "Takes you back to your last Death Point and grants Absorption and Regeneration.",
   "effect.nethervinery.hearthstone": "Hearthstone",
+  "effect.nethervinery.hearthstone.description": "Takes you back to your Bed.",
   "effect.nethervinery.improved_hearthstone": "Improved Hearthstone",
+  "effect.nethervinery.improved_hearthstone.description": "Takes you back to your bBd and grants Absorption and Regeneration.",
   "itemGroup.nethervinery.nethervinery_tab": "[Let's Do] Nether Vinery",
   "rei.nethervinery.wine_press_category": "Apple Press"
 }
