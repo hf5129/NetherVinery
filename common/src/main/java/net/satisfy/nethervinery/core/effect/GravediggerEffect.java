@@ -18,13 +18,14 @@ public class GravediggerEffect extends InstantenousMobEffect {
 
     @Override
     public void applyEffectTick(LivingEntity livingEntity, int amplifier) {
-        if (!livingEntity.level().isClientSide() && livingEntity instanceof ServerPlayer serverPlayer) {
+        if (livingEntity instanceof ServerPlayer serverPlayer) {
             serverPlayer.getLastDeathLocation().ifPresent(deathLocation -> {
                 ResourceKey<Level> deathDimension = deathLocation.dimension();
                 ServerLevel targetLevel = serverPlayer.server.getLevel(deathDimension);
-                if (targetLevel != null && serverPlayer.level().dimension() != deathDimension) {
+                if (targetLevel != null) {
                     BlockPos pos = deathLocation.pos();
-                    serverPlayer.teleportTo(targetLevel, pos.getX(), pos.getY(), pos.getZ(), Mth.wrapDegrees(serverPlayer.getYRot()), Mth.wrapDegrees(serverPlayer.getXRot()));
+                    serverPlayer.teleportTo(targetLevel, pos.getX(), pos.getY(), pos.getZ(),
+                            Mth.wrapDegrees(serverPlayer.getYRot()), Mth.wrapDegrees(serverPlayer.getXRot()));
                 }
             });
         }

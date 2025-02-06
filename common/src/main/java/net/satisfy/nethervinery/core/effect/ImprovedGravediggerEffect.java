@@ -8,8 +8,10 @@ public class ImprovedGravediggerEffect extends GravediggerEffect {
 
     @Override
     public void applyEffectTick(LivingEntity entity, int amplifier) {
-        entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1));
-        entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 600, 1));
-        super.applyEffectTick(entity, amplifier);
+        if (!entity.level().isClientSide()) {
+            entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1));
+            entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 600, 1));
+            super.applyEffectTick(entity, amplifier);
+        }
     }
 }
