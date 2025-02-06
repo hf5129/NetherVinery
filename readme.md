@@ -1,4 +1,4 @@
-<p align="center"><img src="https://imgur.com/CKx6bfG.png" width="1200"></p>
+<p align="center"><img src="https://imgur.com/e2Vn3Ei.png" width="1200"></p>
 
 <h1 align="center">Welcome to NetherVinery!</h1>
 
@@ -21,3 +21,5 @@
         <img style="display: block; margin-left: auto; margin-right: auto;" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/patreon_logo_icon_170869.png" alt="" width="" height="140" />
     </a>
 </p>
+
+
